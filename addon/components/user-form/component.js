@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import AppForm from "ember-cli-appkit/components/app-form/component";
+import layout from "./template";
 
 function validatePassword(pw) {
 	if (!pw) {
@@ -14,6 +15,8 @@ function validatePassword(pw) {
 }
 
 export default AppForm.extend({
+	layout: layout,
+
 	password: "",
 
 	appkit: Ember.inject.service("appkit"),

@@ -17,6 +17,7 @@ module.exports = {
   	this._super.included(app);
 
   	// Bootstrap styles, javascript and fonts.
+	  app.import("bower_components/bootstrap/dist/css/bootstrap.css");
 	  app.import("bower_components/bootstrap/dist/js/bootstrap.js");
 
 	  app.import("bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot", {

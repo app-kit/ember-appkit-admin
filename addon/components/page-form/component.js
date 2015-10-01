@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import AppForm from "ember-cli-appkit/components/app-form/component";
-
 import layout from "./template";
 
 export default AppForm.extend({
