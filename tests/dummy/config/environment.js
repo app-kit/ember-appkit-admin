@@ -16,7 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    "ember-simple-auth": {
+      store: 'session-store:local-storage',
+      crossOriginWhitelist: ['*']
+    },
+
+    appkitHost: "http://localhost:8000",
+    appkitApiPrefix: "api",
   };
 
   if (environment === 'development') {
