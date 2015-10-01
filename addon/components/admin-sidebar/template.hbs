@@ -1,0 +1,48 @@
+<div class="main-sidebar">
+  <!-- Inner sidebar -->
+  <div class="sidebar">
+    
+    {{#if session.isAuthenticated}}
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu">
+      <li class="header">AppKit</li>
+
+      {{yield}}
+
+      <!-- Nested CMS menu -->
+      <li class="treeview">
+        <a href="#"><span>CMS</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li>
+            {{#link-to "pages"}}Pages{{/link-to}}
+          </li>
+          <li>
+            {{#link-to "blogposts"}}Blog{{/link-to}}
+          </li>
+          <li>
+            {{#link-to "menus"}}Menus{{/link-to}}
+          </li>
+        </ul>
+      </li> <!-- ./cms menu -->
+			
+			<!-- Nested USERS menu -->
+      <li class="treeview">
+        <a href="#"><span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li>
+            {{#link-to "users"}}Users{{/link-to}}
+          </li>
+          <li>
+            {{#link-to "roles"}}Roles{{/link-to}}
+          </li>
+          <li>
+            {{#link-to "permissions"}}Permissions{{/link-to}}
+          </li>
+        </ul>
+      </li> <!-- ./users menu -->
+
+    </ul><!-- /.sidebar-menu -->
+    {{/if}}
+
+  </div><!-- /.sidebar -->
+</div><!-- /.main-sidebar -->

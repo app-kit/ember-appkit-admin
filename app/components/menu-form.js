@@ -1,0 +1,1 @@
+export { default } from 'ember-appkit-admin/components/menu-form/component';

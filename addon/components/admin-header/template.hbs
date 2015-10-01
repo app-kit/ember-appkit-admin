@@ -1,0 +1,32 @@
+<!-- HEADER -->
+<header class="main-header">
+  <a href="../../index2.html" class="logo">
+    <!-- LOGO -->
+    AppKit
+  </a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+
+      	{{#if session.isAuthenticated}}
+
+				{{yield}}
+
+      	<li class="user user-menu">
+      		<a href="#" class="dropdown-toggle">
+						USERNAME
+      		</a>
+      	</li>
+
+      	<li class="user user-menu">
+      		<a href="#" {{action "logout"}} class="dropdown-toggle">Log out</a>
+      	</li>
+      	{{/if}}
+
+      </ul>
+    </div>
+  </nav>
+</header>	
+<!-- ./header -->

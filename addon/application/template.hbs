@@ -1,0 +1,41 @@
+<div class="wrapper">
+	{{admin-header}}
+	{{admin-sidebar}}
+
+	<div class="content-wrapper">
+		{{#unless session.isAuthenticated}}
+			{{login-form}}
+		{{/unless}}
+
+		{{#if session.isAuthenticated}}
+			<section class="content-header">
+			  <h1>
+			    {{pageTitle}}
+			    <small></small>
+			  </h1>
+
+			  <ol class="breadcrumb">
+			  	<li>
+			  		{{#link-to "index"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}		
+			  	</li>
+
+			    {{#each breadcrumbs as |part|}}
+					<li>
+						{{#if part.route}}
+							{{#link-to part.route}}{{part.label}}{{/link-to}}
+						{{else}}
+							{{part.label}}
+						{{/if}}
+					</li>
+			    {{/each}}
+			  </ol>
+		  </section>
+
+		  <section class="content">
+				{{outlet}}
+		  </section>
+		{{/if}}
+		
+	</div>
+
+</div>
