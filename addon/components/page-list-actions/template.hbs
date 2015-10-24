@@ -1,0 +1,24 @@
+<div class="actions">
+	<div class="btn-group">
+
+		<button class="btn btn-primary" {{action "update" model }}>
+			<span class="glyphicon glyphicon-pencil"></span>
+		</button>
+
+		<button class="btn btn-danger" {{action "delete" model }}>
+			<span class="glyphicon glyphicon-trash"></span>
+		</button>
+		
+		{{#if model.published}}
+			<button class="btn btn-warning" {{action "unpublish" model}}>
+				Unpublish	
+			</button>
+		{{else}}
+			<button class="btn btn-success" {{action "publish" model}}>
+				Publish
+			</button>
+		{{/if}}
+	</div>	
+
+	{{yield}}
+</div>

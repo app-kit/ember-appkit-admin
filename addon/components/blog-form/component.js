@@ -7,5 +7,6 @@ export default PageForm.extend({
 	type: "blog",
 
 	allowTags: true,
+	allowListSummary: true,
 
 });

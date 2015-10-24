@@ -45,7 +45,7 @@
 	</div>  <!-- ./.box -->
 
 	{{#unless model.isNew}}
-	{{app-list-nested title="Items" modelName="menu-item" modelTitleField="name"  parentModel=model parentField="items" modelParentField="menu" createFormComponent="menu-item-form" updateFormComponent="menu-item-form" columns=menuItemColumns canOrder=true}}
+	{{app-list-nested title="Items" modelName="menu-item" modelTitleField="name"  parentModel=model parentField="items" modelParentField="menu" createFormComponent="menu-item-form" updateFormComponent="menu-item-form" columns=menuItemColumns canOrder=true canOrderHierarchy=true}}
 	{{/unless}}
 
 </div> <!-- ./.app-form -->

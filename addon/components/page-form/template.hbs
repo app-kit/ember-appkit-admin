@@ -23,6 +23,7 @@
 				{{/if}}
 
 				{{em-input property="name" label="Name" placeholder="Name"}}
+				
 				{{em-select
             label="Language"
             property="language"
@@ -33,6 +34,7 @@
 				{{em-input property="title" label="Title" placeholder="Title"}}
 				{{em-input property="slug" label="Slug" placeholder="Slug"}}
 
+				{{em-text property="listSummary" label="List Summary" rows=2}}
 				{{em-text property="summary" label="Summary" rows=3}}
 				{{app-form-ckeditor model=model field="content" label="Content" }}
 
@@ -42,10 +44,6 @@
 					
 				{{#if (and allowFiles model)}}
 				{{appkit-form-files parentModel=model parentField="files" title="Files" bucket="pages" canOrder=true}}
-				{{/if}}
-
-				{{#if (and allowAttachedFiles model)}}
-				{{appkit-form-files model=model parentField="attachedFiles" title="Attached Files" bucket="pages"}}
 				{{/if}}
 
 				{{#if allowMenuItem}}

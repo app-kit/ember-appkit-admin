@@ -10,11 +10,9 @@ export default AppForm.extend({
 	type: "page",
 
 	allowFiles: true,
-	allowAttachedFiles: true,
-
 	allowTags: false,
-
 	allowMenuItem: true,
+	allowListSummary: false,
 
 	submitMethod: "saveWithRelations",
 
